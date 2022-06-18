@@ -37,7 +37,8 @@ GEM
     execjs (2.8.1)
     fast_blank (1.0.1)
     fastimage (2.2.6)
-    ffi (1.15.5-x64-mingw-ucrt)
+    ffi (1.15.5)
+    ffi (1.15.5-x64-unknown)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -141,7 +142,8 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  x64-mingw-ucrt
+  universal-darwin-21
+  x64-unknown
 
 DEPENDENCIES
   contentful_middleman

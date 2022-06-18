@@ -1,6 +1,44 @@
 ---
-title: Welcome to Middleman
+title: HBP
 ---
+<link rel="stylesheet" href="stylesheets/all.css">
+
+<header class='nav-bg-blue'>
+<a class='' href='/'>
+  <% data.stuff.header.each do |id, header| %>
+  <div class="text-white"><%= header["title"] %></div>
+  <% end %>
+</a>
+<nav>
+  <ul id="main-nav" class="nav">
+    <li>
+      <% data.stuff.header.each do |id, header| %>
+        <a class="nav-link text-white" href="#info"><%= header["info"] %></a>
+      <% end %>
+    </li>
+    <li>
+      <% data.stuff.header.each do |id, header| %>
+        <a class="nav-link text-white" href="#gallery"><%= header["moments"] %></a>
+      <% end %>
+    </li>
+    <li>
+      <% data.stuff.body.each do |id, body| %>
+        <a class="nav-link text-white" href="#yhteistyokumppanit"><%= body["partners"] %></a>
+      <% end %>
+    </li>
+    <li>
+      <% data.stuff.header.each do |id, header| %>
+        <a class='nav-link text-white language-link' href='/se/'><%= header["english"] %></a>
+      <% end %>
+    </li>
+    <li>
+      <% data.stuff.header.each do |id, header| %>
+        <a class='nav-link text-white language-link' href='/fi/'><%= header["finnish"] %></a>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+</header>
 
 <div class="jumbotron">
   <div class="container">
@@ -15,9 +53,12 @@ title: Welcome to Middleman
       <p><%= body["text_body"] %></p>
     <% end %>
   </div>
+
   <footer>
     <% data.stuff.footer.each do |id, footer| %>
       <p><%= footer["copyright"] %></p>
     <% end %>
   </footer>
 </div>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css'>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.bundle.min.js'></script>
