@@ -4,13 +4,20 @@ title: Welcome to Middleman
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Herttoniemi Block Party</h1>
     <div class="md-col-8 md-offset-2">
-      <ul>
         <% data.stuff.header.each do |id, header| %>
-          <li><%= header["info"] %></li>
+          <h1><%= header["title"] %></h1>
         <% end %>
-      </ul>
     </div>
   </div>
+  <div class="md-col-8 md-offset-2">
+    <% data.stuff.body.each do |id, body| %>
+      <p><%= body["text_body"] %></p>
+    <% end %>
+  </div>
+  <footer>
+    <% data.stuff.footer.each do |id, footer| %>
+      <p><%= footer["copyright"] %></p>
+    <% end %>
+  </footer>
 </div>
