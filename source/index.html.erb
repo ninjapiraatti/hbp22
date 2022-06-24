@@ -4,30 +4,31 @@ title: HBP
 <link rel="stylesheet" href="stylesheets/all.css">
 <header class='nav-bg-blue'>
 <% data.stuff.header.each do |id, header| %>
+  <% en_header = localize_entry(header, 'en') %>
   <nav>
     <ul id="main-nav" class="nav">
       <li>
         <a href='/'>
           <div class="text-white">
           <img src='<%= header["logo"]["url"] %>'/>
-            <%= header["title"] %>
+            <%= en_header["title"] %>
           </div>
         </a>
       </li>
       <li>
-          <a class="nav-link text-white" href="#info"><%= header["info"] %></a>
+          <a class="nav-link text-white" href="#info"><%= en_header["info"] %></a>
       </li>
       <li>
-          <a class="nav-link text-white" href="#gallery"><%= header["moments"] %></a>
+          <a class="nav-link text-white" href="#gallery"><%= en_header["moments"] %></a>
       </li>
       <li>
-          <a class="nav-link text-white" href="#yhteistyokumppanit"><%= header["moments"] %></a>
+          <a class="nav-link text-white" href="#yhteistyokumppanit"><%= en_header["partners"] %></a>
       </li>
       <li>
-          <a class='nav-link text-white language-link' href='/en/'><%= header["english"] %></a>
+          <a class='nav-link text-white language-link' href='/en/'><%= en_header["english"] %></a>
       </li>
       <li>
-          <a class='nav-link text-white language-link' href='/fi/'><%= header["finnish"] %></a>
+          <a class='nav-link text-white language-link' href='/fi/'><%= en_header["finnish"] %></a>
       </li>
     </ul>
   </nav>
@@ -39,20 +40,23 @@ title: HBP
 
     <div class="md-col-8 md-offset-2">
         <% data.stuff.header.each do |id, header| %>
-          <h1 class="black"><%= header["title"] %></h1>
+          <% en_header = localize_entry(header, 'en') %>
+          <h1 class="black"><%= en_header["title"] %></h1>
         <% end %>
     </div>
   </div>
 
   <div class="md-col-8 md-offset-2">
     <% data.stuff.body.each do |id, body| %>
-      <p class="thin"><%= body["text_body"] %></p>
+      <% en_body = localize_entry(body, 'en') %>
+      <p class="thin"><%= en_body["text_body"] %></p>
     <% end %>
   </div>
 
   <footer>
     <% data.stuff.footer.each do |id, footer| %>
-      <p class="lightItalic"><%= footer["copyright"] %></p>
+      <% en_footer = localize_entry(footer, 'en') %>
+      <p class="lightItalic"><%= en_footer["copyright"] %></p>
     <% end %>
   </footer>
 
