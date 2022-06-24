@@ -1,4 +1,27 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,900;1,300&display=swap');
+
+.thin {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+.light {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.lightItalic {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.black {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
 .nav-bg-blue {
   background-color: #247BA0;
 }
